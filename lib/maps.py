@@ -54,12 +54,14 @@ class cmbmap(object):
 
 		if bounds != None:
 			self.bounds = bounds
-			self.datamap,self.mapheader,self.projection = _selectsubmap(self.datamap, self.projection, self.bounds)
+			self.datamap,self.mapheader,self.projection = _selectsubmap(self.datamap, 
+						    self.mapheader, self.projection, self.bounds)
 
 		if WeightsFile != None:
 			self.weightsmap = fits.getdata(WeightsFile, 0)
 			if bounds != None:
-				self.weightsmap = _selectsubmap(datamap,bounds)[0]
+				self.weightsmap = _selectsubmap(self.datamap, self.mapheader, 
+								self.projection, self.bounds)[0]
 
 
 
