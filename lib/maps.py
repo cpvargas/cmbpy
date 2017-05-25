@@ -29,7 +29,7 @@ def _selectsubmap(data,header,projection,bounds):
 	return data,hdr,w
 
 class cmbmap(object):
-	def __init(self,MapFile,bounds=None,WeightsFile=None):
+	def __init__(self,MapFile,bounds=None,WeightsFile=None):
 		"""
 		args: Mapfile: fits file containing the data
 
