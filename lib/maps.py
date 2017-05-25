@@ -13,7 +13,7 @@ def _selectsubmap(data,header,projection,bounds):
 	DEC0 = bounds[2]
 	DEC1 = bounds[3]
 	verticesworld = np.array([[RA0,DEC0],[RA1,DEC1]])
-	rawpix = w.wcs_world2pix(verticesworld, 0) #0 for the representation
+	rawpix = projection.wcs_world2pix(verticesworld, 0) #0 for the representation
 	pixcoords = np.array(np.round(rawpix,0), dtype=np.int)
 	x0 = pixcoords[0][0]
 	y0 = pixcoords[0][1]
