@@ -49,19 +49,19 @@ class cmbmap(object):
 		#inferior left corner pixel is [1,1] used in ds9 for example
 
 		self.mapheader = fits.getheader(MapFile, 0)
-		self.datamap = fits.getdata(MapFile, 0)
+		self.data = fits.getdata(MapFile, 0)
 		self.projection = wcs.WCS(self.mapheader)
 
 		if bounds != None:
 			self.bounds = bounds
-			self.datamap,self.mapheader,self.projection = _selectsubmap(self.datamap, 
-						    self.mapheader, self.projection, self.bounds)
+			self.data,self.mapheader,self.projection = _selectsubmap(self.data, 
+				               self.mapheader, self.projection, self.bounds)
 
 		if WeightsFile != None:
-			self.weightsmap = fits.getdata(WeightsFile, 0)
+			self.weights = fits.getdata(WeightsFile, 0)
 			if bounds != None:
-				self.weightsmap = _selectsubmap(self.datamap, self.mapheader, 
-								self.projection, self.bounds)[0]
+				self.weights = _selectsubmap(self.weights, self.mapheader, 
+							     self.projection, self.bounds)[0]
 
 
 
