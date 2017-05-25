@@ -22,7 +22,7 @@ def _selectsubmap(data,header,projection,bounds):
 	data = data[y0:y1+1,x0:x0+1]
 	hdr= header.copy()
 	hdr["NAXIS1"] = data.shape[1]
-	hdr["NAXIS2"] = data.shape[2]
+	hdr["NAXIS2"] = data.shape[0]
 	hdr["CRPIX1"] -= x0
 	hdr["CRPIX2"] -= y0
 	w = wcs.WCS(hdr)
