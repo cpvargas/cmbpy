@@ -50,7 +50,7 @@ class cmbmap(object):
 
 		self.mapheader = fits.getheader(MapFile, 0)
 		self.datamap = fits.getdata(MapFile, 0)
-		self.projection = wcs.WCS(mapheader)
+		self.projection = wcs.WCS(self.mapheader)
 
 		if bounds != None:
 			self.datamap,self.mapheader,self.projection = _selectsubmap(self.datamap, self.w, self.bounds)
