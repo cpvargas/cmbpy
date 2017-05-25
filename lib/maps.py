@@ -2,7 +2,7 @@
 
 from astropy.io import fits
 from astropy.wcs import wcs
-import numpy as numpy
+import numpy as np
 
 def _selectsubmap(data,header,projection,bounds):
 	"""
