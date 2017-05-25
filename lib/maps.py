@@ -53,6 +53,7 @@ class cmbmap(object):
 		self.projection = wcs.WCS(self.mapheader)
 
 		if bounds != None:
+			self.bounds = bounds
 			self.datamap,self.mapheader,self.projection = _selectsubmap(self.datamap, self.projection, self.bounds)
 
 		if WeightsFile != None:
