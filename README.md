@@ -11,7 +11,7 @@ cmbpy it's using the following packages:
 
 [matplotlib](https://matplotlib.org/)
 
-[astropy](http://www.astropy.org/) (specifically astropy.io.fits [pyfits])
+[astropy](http://www.astropy.org/)
 
 ## Installation
 
