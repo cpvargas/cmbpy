@@ -1,7 +1,7 @@
 # cmbpy
 python tool for working with Cosmic Microwave Background data
 
-#Dependencies
+## Dependencies
 
 cmbpy it's using the following packages:
 
