@@ -5,6 +5,8 @@ python tool for working with Cosmic Microwave Background data
 
 cmbpy it's using the following packages:
 
+[flipper](https://github.com/cpvargas/flipper#flipper)
+
 [numpy](http://www.numpy.org/)
 
 [scipy](https://www.scipy.org/)
@@ -13,9 +15,11 @@ cmbpy it's using the following packages:
 
 [astropy](http://www.astropy.org/)
 
+[photutils](https://photutils.readthedocs.io/en/stable/)
+
 ## Installation
 
-pip installation will be implemented later, for now to add cactusLib to your scripts append the following line to your .bashrc (Linux) or .bash_profile (macOS):
+pip installation will be implemented later, for now to add cmbpy to your scripts append the following line to your .bashrc (Linux) or .bash_profile (macOS):
 
 ```
 export PYTHONPATH="/path/to/your/cmbpy/lib:$PYTHONPATH"
