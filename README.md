@@ -3,7 +3,7 @@ python tool for working with Cosmic Microwave Background data
 
 ## Dependencies
 
-cmbpy it's using the following packages:
+cmbpy uses the following packages:
 
 [flipper](https://github.com/cpvargas/flipper#flipper)
 
